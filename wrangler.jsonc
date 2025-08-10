@@ -1,69 +1,14 @@
-/**
-* For more details on how to configure Wrangler, refer to:
-* https://developers.cloudflare.com/workers/wrangler/configuration/
-*/
 {
-"$schema": "node_modules/wrangler/config-schema.json",
-"name": "wedding-cli",
-"main": "./dist/_worker.js/index.js",
-"compatibility_date": "2025-07-30",
-"compatibility_flags": [
-"nodejs_compat",
-"global_fetch_strictly_public"
-],
-"assets": {
-"binding": "ASSETS",
-"directory": "./dist"
-},
-"observability": {
-"enabled": true
-},
-"d1_databases": [
-{
-"binding": "DB",
-"database_name": "wedding-site-database",
-"database_id": "152974d1-3034-4383-8872-f06adaa3434f" // This will be provided after creating the DB
-}
-],
-"secrets_store_secrets": [
-{
-"binding": "<BINDING_VARIABLE>",
-"store_id": "d36b14c2fcd4405e9cb47268d0ec5d97",
-"secret_name": "RESEND_API_KEY"
-}
-]
-/**
-* Smart Placement
-* Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
-*/
-// "placement": { "mode": "smart" },
-
-/**
-* Bindings
-* Bindings allow your Worker to interact with resources on the Cloudflare Developer Platform, including
-* databases, object storage, AI inference, real-time communication and more.
-* https://developers.cloudflare.com/workers/runtime-apis/bindings/
-*/
-
-/**
-* Environment Variables
-* https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
-*/
-// "vars": { "MY_VARIABLE": "production_value" },
-/**
-* Note: Use secrets to store sensitive data.
-* https://developers.cloudflare.com/workers/configuration/secrets/
-*/
-
-/**
-* Static Assets
-* https://developers.cloudflare.com/workers/static-assets/binding/
-*/
-// "assets": { "directory": "./public/", "binding": "ASSETS" },
-
-/**
-* Service Bindings (communicate between multiple Workers)
-* https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
-*/
-// "services": [{ "binding": "MY_SERVICE", "service": "my-service" }]
+  "name": "astro-blog-starter-template",
+  "compatibility_date": "2025-04-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "main": "./dist/_worker.js/index.js",
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "upload_source_maps": true
 }
