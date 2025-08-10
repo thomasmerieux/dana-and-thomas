@@ -1,22 +1,16 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import HomeLayout from './HomeLayout.astro';
+import Home from '../components/Home.astro';
+import type { Languages } from '../i18n/ui';
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+export interface Props {
+  lang?: Languages;
+  t?: any;
+}
+
+const { lang = 'en', t } = Astro.props;
+---
+
+<HomeLayout title="DANA & THOMAS" lang={lang} t={t}>
+  <Home lang={lang} t={t} />
+</HomeLayout>

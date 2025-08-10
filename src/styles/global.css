@@ -1,0 +1,40 @@
+/* Global styles for wedding website */
+
+/* Google Fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base styles */
+html {
+  font-family: 'Jost', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
+/* Focus styles */
+input:focus,
+select:focus,
+textarea:focus {
+  @apply outline-none border-gray-500;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-gray-900 text-white px-8 py-2 hover:bg-gray-700 transition-colors font-normal uppercase tracking-wide;
+}
+
+/* Form styles */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 focus:outline-none focus:border-gray-500;
+}
+
+.form-label {
+  @apply block text-gray-900 mb-2 font-normal;
+}
+
+/* Radio and checkbox styles */
+.form-radio,
+.form-checkbox {
+  @apply h-4 w-4 text-gray-600 border-gray-300 focus:ring-0 focus:ring-gray-500;
+}
